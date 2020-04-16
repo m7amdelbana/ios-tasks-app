@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyScreenController" customModule="My_Tasks" customModuleProvider="target">
+            <connections>
+                <outlet property="lblMessage" destination="t6b-mP-zph" id="gqP-XW-QnS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t6b-mP-zph">
+                    <rect key="frame" x="62" y="418" width="290" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="ErS-1W-1lP">
+                    <rect key="frame" x="157" y="298" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="IRe-mK-cq4"/>
+                        <constraint firstAttribute="height" constant="100" id="jG4-Uw-Fc6"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="t6b-mP-zph" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.7" id="016-MJ-qlT"/>
+                <constraint firstItem="ErS-1W-1lP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="ObE-Ef-cxU"/>
+                <constraint firstItem="t6b-mP-zph" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Vsg-71-hxu"/>
+                <constraint firstItem="t6b-mP-zph" firstAttribute="top" secondItem="ErS-1W-1lP" secondAttribute="bottom" constant="20" id="W72-8w-iBd"/>
+                <constraint firstItem="ErS-1W-1lP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="nL9-fO-7B2"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="placeholder" width="100" height="100"/>
+    </resources>
+</document>

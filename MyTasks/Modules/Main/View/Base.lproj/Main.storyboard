@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainController" id="BYZ-38-t0r" customClass="MainController" customModule="My_Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="der-Es-kZ6">
+                                <rect key="frame" x="69.5" y="64" width="275" height="32"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="priorityChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="CWW-YJ-TNQ"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pPp-7t-HSH">
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eSq-Wn-MfW">
+                                <rect key="frame" x="0.0" y="115" width="414" height="747"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pPp-7t-HSH" firstAttribute="top" secondItem="der-Es-kZ6" secondAttribute="bottom" constant="20" id="0JP-kP-BgD"/>
+                            <constraint firstItem="der-Es-kZ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="49v-2k-XzE"/>
+                            <constraint firstItem="eSq-Wn-MfW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IjT-vy-gVe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eSq-Wn-MfW" secondAttribute="bottom" id="Rhl-H4-2p1"/>
+                            <constraint firstItem="pPp-7t-HSH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="baN-39-pts"/>
+                            <constraint firstItem="der-Es-kZ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iPP-u9-iZg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eSq-Wn-MfW" secondAttribute="trailing" id="lqN-TM-fQ7"/>
+                            <constraint firstItem="pPp-7t-HSH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mEb-rw-blE"/>
+                            <constraint firstItem="pPp-7t-HSH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mvn-qF-zlz"/>
+                            <constraint firstItem="eSq-Wn-MfW" firstAttribute="top" secondItem="der-Es-kZ6" secondAttribute="bottom" constant="20" id="ySt-9U-wY3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sgPriority" destination="der-Es-kZ6" id="5Uw-4M-3sQ"/>
+                        <outlet property="tableView" destination="eSq-Wn-MfW" id="G5Z-se-xv0"/>
+                        <outlet property="viewContainer" destination="pPp-7t-HSH" id="3vR-Lt-yiK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

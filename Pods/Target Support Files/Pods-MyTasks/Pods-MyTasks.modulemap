@@ -1,0 +1,6 @@
+framework module Pods_MyTasks {
+  umbrella header "Pods-MyTasks-umbrella.h"
+
+  export *
+  module * { export * }
+}

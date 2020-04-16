@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="48r-K2-qSS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Task Controller-->
+        <scene sceneID="gRV-WQ-ehe">
+            <objects>
+                <viewController storyboardIdentifier="TaskController" id="48r-K2-qSS" customClass="TaskController" customModule="My_Tasks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIp-re-oTf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K1U-Nd-Rrm">
+                                <rect key="frame" x="104" y="64" width="206" height="32"/>
+                                <segments>
+                                    <segment title="High"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Low"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-JX-JyG">
+                                <rect key="frame" x="15" y="145" width="384" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3o-sY-XBM">
+                                <rect key="frame" x="20" y="115" width="374" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="BXR-GJ-5hX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="K1U-Nd-Rrm" firstAttribute="centerX" secondItem="QIp-re-oTf" secondAttribute="centerX" id="346-8B-eft"/>
+                            <constraint firstItem="tbn-JX-JyG" firstAttribute="top" secondItem="a3o-sY-XBM" secondAttribute="bottom" constant="10" id="Kfs-u4-eL4"/>
+                            <constraint firstItem="a3o-sY-XBM" firstAttribute="leading" secondItem="dat-jl-2b7" secondAttribute="leading" constant="20" id="MMX-5B-hv0"/>
+                            <constraint firstItem="a3o-sY-XBM" firstAttribute="top" secondItem="K1U-Nd-Rrm" secondAttribute="bottom" constant="20" id="SR2-QF-0YN"/>
+                            <constraint firstItem="K1U-Nd-Rrm" firstAttribute="top" secondItem="dat-jl-2b7" secondAttribute="top" constant="20" id="SYP-Dz-TY3"/>
+                            <constraint firstItem="dat-jl-2b7" firstAttribute="trailing" secondItem="a3o-sY-XBM" secondAttribute="trailing" constant="20" id="jXA-0l-ell"/>
+                            <constraint firstItem="tbn-JX-JyG" firstAttribute="leading" secondItem="dat-jl-2b7" secondAttribute="leading" constant="15" id="n2I-RR-wNu"/>
+                            <constraint firstItem="dat-jl-2b7" firstAttribute="trailing" secondItem="tbn-JX-JyG" secondAttribute="trailing" constant="15" id="pFj-Za-pec"/>
+                            <constraint firstItem="dat-jl-2b7" firstAttribute="bottom" secondItem="tbn-JX-JyG" secondAttribute="bottom" id="s00-uz-BZJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dat-jl-2b7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lQg-RE-6dR"/>
+                    <connections>
+                        <outlet property="lblDate" destination="a3o-sY-XBM" id="BR5-fn-e6o"/>
+                        <outlet property="sgPriority" destination="K1U-Nd-Rrm" id="V9Z-yb-CDa"/>
+                        <outlet property="txtView" destination="tbn-JX-JyG" id="dWA-1Q-nFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLy-wX-dTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="44.866071428571423"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>

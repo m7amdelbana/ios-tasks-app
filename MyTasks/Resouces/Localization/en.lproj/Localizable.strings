@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  MyTasks
+  
+  Created by Mohamed Elbana on 2/15/20.
+  Copyright © 2020 Mohamed Elbana. All rights reserved.
+*/
+
+"app_title" = "Hello!";
+"error_title" = "Something went wrong!";
+"error_message" = "Unable to complete the request! Please try again.";
+"add_task" = "Add Task";
+"high" = "High";
+"medium" = "Medium";
+"low" = "Low";
+"no_tasks_message" = "You don't have any tasks right new. Press (+) to start adding new tasks.";
+"ok" = "OK";
+"empty" = "Empty!";
+"empty_task_message" = "The task is empty! You should write any text to save the task.";
